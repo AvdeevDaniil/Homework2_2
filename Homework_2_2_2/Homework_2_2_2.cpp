@@ -12,33 +12,37 @@ struct bankAccount
 
 void createNewAcc(bankAccount* ptrPerson)
 {
-    std::cout << "Введите номер счета: ";
+    std::cout << "\nВведите номер счета: ";
     std::cin >> ptrPerson->id;
 
-    std::cout << "Введите имя пользователя: ";
+    std::cout << "\nВведите имя пользователя: ";
     std::cin >> ptrPerson->userName;
 
-    std::cout << "Введите баланс: ";
+    std::cout << "\nВведите баланс: ";
     std::cin >> ptrPerson->balance;
 }
 
 
 void changeBalance(bankAccount* ptrPerson)
 {
-    std::cout << "Введите новый баланс: ";
+    std::cout << "\nВведите новый баланс: ";
     std::cin >> ptrPerson->balance;
 }
 
 
 void printAccInfo(bankAccount* ptrPerson)
 {
-    std::cout << "Ваш счет: " << ptrPerson->userName << ", " << ptrPerson->id << ", " << ptrPerson->balance << std::endl;
+    std::cout << "\nВаш счет: " 
+        << "\nИмя пользователя: " << ptrPerson->userName
+        << "\nID пользователя: " << ptrPerson->id
+        << "\nБаланс: " << ptrPerson->balance << std::endl;
 }
 
 
 int main()
 {
     setlocale(LC_ALL, "Russian");
+    system("chcp 1251");
 
 
     bankAccount newPerson;
